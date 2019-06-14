@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>命名规范 | VueJS 前端开发规范</title>
+    <meta name="description" content="VueJS 前端开发规范">
+    
+    
+    <link rel="preload" href="/front-end-dev-guide/dist/assets/css/0.styles.5c33bd8d.css" as="style"><link rel="preload" href="/front-end-dev-guide/dist/assets/js/app.bdc4b6cc.js" as="script"><link rel="preload" href="/front-end-dev-guide/dist/assets/js/2.a528c3f1.js" as="script"><link rel="preload" href="/front-end-dev-guide/dist/assets/js/7.5a8d3401.js" as="script"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/10.3fa139c5.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/3.c4eecc9e.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/4.e89cc41c.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/5.5a955b51.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/6.a5e4e718.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/8.a499c279.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/9.169c5135.js">
+    <link rel="stylesheet" href="/front-end-dev-guide/dist/assets/css/0.styles.5c33bd8d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/front-end-dev-guide/dist/" class="home-link router-link-active"><!----> <span class="site-name">VueJS 前端开发规范</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/front-end-dev-guide/dist/" class="sidebar-link">前言</a></li><li><a href="/front-end-dev-guide/dist/selection.html" class="sidebar-link">技术选型</a></li><li><a href="/front-end-dev-guide/dist/naming.html" class="active sidebar-link">命名规范</a></li><li><a href="/front-end-dev-guide/dist/codeStyle.html" class="sidebar-link">代码风格</a></li><li><a href="/front-end-dev-guide/dist/vueRules.html" class="sidebar-link">Vue开发规范</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="命名规范"><a href="#命名规范" aria-hidden="true" class="header-anchor">#</a> 命名规范</h1> <br> <ol><li><strong>变量命名：</strong> 使用小驼峰</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">let</span> prodcutName <span class="token operator">=</span> <span class="token string">'name'</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">let</span> productname <span class="token operator">=</span> <span class="token string">'name'</span>
+<span class="token keyword">let</span> Productname <span class="token operator">=</span> <span class="token string">'name'</span>
+<span class="token keyword">let</span> ProductName <span class="token operator">=</span> <span class="token string">'name'</span>
+</code></pre></div><br> <ol start="2"><li><strong>类命名：</strong> 使用大驼峰</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">HelloWorld</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">HelloWorld</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">say</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">/*...*/</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">class</span> <span class="token class-name">helloWorld</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">HELLO_WORLD</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><br> <ol start="3"><li><strong>函数名：</strong> 使用小驼峰</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">function</span> <span class="token function">helloWorld</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">function</span> <span class="token function">HelloWorld</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token constant">HELLO_WORLD</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><br> <ol start="4"><li><strong>常量：</strong> 全部大写字母加下划线</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">const</span> <span class="token constant">HELLO_WORLD</span> <span class="token operator">=</span> <span class="token string">'nihao'</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">const</span> helloWorld <span class="token operator">=</span> <span class="token string">'nihoa'</span>
+</code></pre></div><br> <ol start="5"><li><strong>id选择器：</strong> 使用小驼峰</li></ol> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- good --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>helloWorld<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- bad --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>hello-world<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>HelloWorld<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><br> <ol start="6"><li><strong>class选择器：</strong> BEM规范</li></ol> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dialog<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dialog-title<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dialog-title-icon<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dialog-title-text<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>dialog-content<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><br> <ol start="7"><li><strong>Vue文件命名：</strong> 大驼峰</li></ol> <div class="language- extra-class"><pre class="language-text"><code>  │  App.vue
+  │  main.js
+  │  
+  ├─assets
+  │      logo.png
+  │      
+  └─components
+          HelloWorld.vue
+</code></pre></div><br> <p>尽量使用英文命名，命名不要超过3个单词，英文简写应尽量表意。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/front-end-dev-guide/dist/selection.html" class="prev">
+          技术选型
+        </a></span> <span class="next"><a href="/front-end-dev-guide/dist/codeStyle.html">
+          代码风格
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/front-end-dev-guide/dist/assets/js/app.bdc4b6cc.js" defer></script><script src="/front-end-dev-guide/dist/assets/js/2.a528c3f1.js" defer></script><script src="/front-end-dev-guide/dist/assets/js/7.5a8d3401.js" defer></script>
+  </body>
+</html>

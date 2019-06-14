@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>代码风格 | VueJS 前端开发规范</title>
+    <meta name="description" content="VueJS 前端开发规范">
+    
+    
+    <link rel="preload" href="/front-end-dev-guide/dist/assets/css/0.styles.5c33bd8d.css" as="style"><link rel="preload" href="/front-end-dev-guide/dist/assets/js/app.bdc4b6cc.js" as="script"><link rel="preload" href="/front-end-dev-guide/dist/assets/js/2.a528c3f1.js" as="script"><link rel="preload" href="/front-end-dev-guide/dist/assets/js/6.a5e4e718.js" as="script"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/10.3fa139c5.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/3.c4eecc9e.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/4.e89cc41c.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/5.5a955b51.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/7.5a8d3401.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/8.a499c279.js"><link rel="prefetch" href="/front-end-dev-guide/dist/assets/js/9.169c5135.js">
+    <link rel="stylesheet" href="/front-end-dev-guide/dist/assets/css/0.styles.5c33bd8d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/front-end-dev-guide/dist/" class="home-link router-link-active"><!----> <span class="site-name">VueJS 前端开发规范</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/front-end-dev-guide/dist/" class="sidebar-link">前言</a></li><li><a href="/front-end-dev-guide/dist/selection.html" class="sidebar-link">技术选型</a></li><li><a href="/front-end-dev-guide/dist/naming.html" class="sidebar-link">命名规范</a></li><li><a href="/front-end-dev-guide/dist/codeStyle.html" class="active sidebar-link">代码风格</a></li><li><a href="/front-end-dev-guide/dist/vueRules.html" class="sidebar-link">Vue开发规范</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="代码风格"><a href="#代码风格" aria-hidden="true" class="header-anchor">#</a> 代码风格</h1> <ol><li><p><strong>代码规范：</strong> ES6
+<br></p></li> <li><p><strong>代码缩进：</strong> 两个空格</p></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token string">'shb'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token string">'shb'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token string">'shb'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><br> <ol start="3"><li><strong>变量声明：</strong> <ul><li>使用let、const代替var</li> <li>变量需要在头部声明</li> <li>变量必须先声明，后使用</li> <li>声明变量，必须使用</li></ul></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'suo'</span>
+<span class="token keyword">const</span> <span class="token constant">SCREEN_WIDTH</span> <span class="token operator">=</span> <span class="token number">1280</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'suo'</span>
+<span class="token keyword">var</span> <span class="token constant">SCREEN_WIDTH</span> <span class="token operator">=</span> <span class="token number">1280</span>
+</code></pre></div><br> <ol start="4"><li><strong>注释</strong></li></ol> <ul><li><strong>单行注释</strong> <ul><li>变量声明，注释是声明语句之后</li> <li>代码块，注释在代码块前一行</li> <li>注释内容要与斜线之间空一格空格</li></ul></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'suo'</span> <span class="token comment">// 这里是我的名字</span>
+
+<span class="token comment">// 如果是suo 那么需要特殊处理</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token string">'suo'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// bad</span>
+<span class="token comment">// 这里是我的名字</span>
+<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'suo'</span> 
+<span class="token keyword">let</span> name2 <span class="token operator">=</span> <span class="token string">'bobo'</span> <span class="token comment">//这是bobo</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token string">'suo'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 如果是suo 那么需要特殊处理</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><strong>多行注释</strong> <ul><li>注释第一行，最后一行，不能有注释内容</li> <li>第二行之后的*号，要空一个空格</li> <li>注释内容要与*号间隔一个空格</li></ul></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * 注释内容
+ */</span>
+</code></pre></div><br> <ol start="5"><li><strong>不得出现多个连续空行</strong></li></ol> <br> <ol start="6"><li><strong>if语句之后</strong></li></ol> <ul><li>左大括号之前，有且仅有一个空格</li> <li>else语句前后，有且仅有一个空格</li> <li>左大括号，不得单独一行</li> <li>小括号与字符之间不得有空格</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token string">'suo'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span> name <span class="token operator">===</span> <span class="token string">'suo'</span> <span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><br> <ol start="7"><li><strong>函数声明</strong></li></ol> <ul><li>小括号前后，有且仅有一个空格</li> <li>匿名函数，=&gt;前后，有且仅有一个空格</li> <li>多个参数，参数后边逗号之后，有且仅有一个空格</li> <li>小括号内与字符连接位置，不得有空格</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">function</span> <span class="token function">fn1</span> <span class="token punctuation">(</span><span class="token parameter">p1<span class="token punctuation">,</span> p2<span class="token punctuation">,</span> p3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> <span class="token function-variable function">fn2</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span> <span class="token parameter">p1<span class="token punctuation">,</span>p2<span class="token punctuation">,</span>p3</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> <span class="token function-variable function">fn2</span> <span class="token operator">=</span> <span class="token punctuation">(</span> <span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><br> <ol start="8"><li><strong>使用 ===,!== 替换 ==,!=</strong></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token string">'suo'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">!==</span> <span class="token string">'suo'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">==</span> <span class="token string">'suo'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>name <span class="token operator">!=</span> <span class="token string">'suo'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><br> <ol start="9"><li><strong>不得出现无意义的阿拉伯数字,需要复制给变量，或者增加注释</strong></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// good</span>
+<span class="token keyword">let</span> totalPage <span class="token operator">=</span> <span class="token number">20</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>curPage <span class="token operator">&lt;</span> totalPage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// bad</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>curPage <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><br> <ol start="10"><li><p><strong>部分CSS使用简写</strong></p> <ul><li>margin</li> <li>padding</li> <li>transition</li> <li>animiation</li> <li>background</li> <li>border</li></ul></li> <li><p><strong>font样式不得使用简写</strong></p></li></ol> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.text</span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> blod<span class="token punctuation">;</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'SimHei'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><br> <ol start="12"><li><strong>html标签必须闭合</strong></li></ol> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- good --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token punctuation">/&gt;</span></span>
+
+<span class="token comment">&lt;!-- bad --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><br> <ol start="13"><li><strong>html中使用双引号，script中使用单引号</strong></li></ol> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'suo'</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><br> <ol start="14"><li><strong>行内元素不得包含块级元素</strong></li></ol> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- bad --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><br> <ol start="15"><li><strong>重要位置、复杂业务逻辑、特殊情况处理、会产生歧义语句等，需要添加注释</strong></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/front-end-dev-guide/dist/naming.html" class="prev">
+          命名规范
+        </a></span> <span class="next"><a href="/front-end-dev-guide/dist/vueRules.html">
+          Vue开发规范
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/front-end-dev-guide/dist/assets/js/app.bdc4b6cc.js" defer></script><script src="/front-end-dev-guide/dist/assets/js/2.a528c3f1.js" defer></script><script src="/front-end-dev-guide/dist/assets/js/6.a5e4e718.js" defer></script>
+  </body>
+</html>
